@@ -1,22 +1,21 @@
 package nl.novi.javaprogrammeren;
-
 import java.util.Date;
-
+import java.lang.*;
 
 public class ChipRing {
     private String chipRingNumber;
     private Date releaseDate;
     private Date arrivalDate;
 
-    private long releaseLat;
-    private long releaseLong;
+    private double releaseLat;
+    private double releaseLong;
     private String releaseCity;
 
-    private long arriveLat;
-    private long arriveLong;
+    private double arriveLat;
+    private double arriveLong;
     private String arriveCity;
 
-    public ChipRing(String chipRingNumber, Date releaseDate, Date arrivalDate, long releaseLat, long releaseLong, String releaseCity, long arriveLat, long arriveLong, String arriveCity) {
+    public ChipRing(String chipRingNumber, Date releaseDate, Date arrivalDate, double releaseLat, double releaseLong, String releaseCity, double arriveLat, double arriveLong, String arriveCity) {
         this.chipRingNumber = chipRingNumber;
         this.releaseDate = releaseDate;
         this.arrivalDate = arrivalDate;
@@ -26,11 +25,6 @@ public class ChipRing {
         this.arriveLat = arriveLat;
         this.arriveLong = arriveLong;
         this.arriveCity = arriveCity;
-    }
-
-    public long calcDistance(){
-        long distance = (long) Math.sqrt(Math.pow(releaseLong - releaseLat, 2) + Math.pow(arriveLong - arriveLat,2));
-        return distance;
     }
 
     public long calcReleaseTime() {
@@ -46,6 +40,17 @@ public class ChipRing {
         long arrivalTime = calcArrivalTime();
         long flightTime =  arrivalTime - releaseTime;
         return flightTime;
+    }
+
+    // calculate distance
+    public double calcDistance() {
+        releaseLat = Math.toRadians(releaseLat);
+        releaseLong = Math.toRadians(releaseLong);
+        arriveLat = Math.toRadians(arriveLat);
+        arriveLong = Math.toRadians(arriveLong);
+
+        double earthRadius = 6371.01; //Kilometers
+        return earthRadius * Math.acos(Math.sin(releaseLat)*Math.sin(arriveLat) + Math.cos(releaseLat)*Math.cos(arriveLat)*Math.cos(releaseLong - arriveLong));
     }
 
     @Override
