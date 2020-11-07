@@ -19,6 +19,8 @@ public class Main {
         Date arrivalDate = new Date(2021,4,17,20,23,11);
         Date doveBirthDate = new Date(2019,2,1);
 
+
+        // ik wil vanuit de clubmemberclass de ringNummer kunnen setten
         String ringNumber = "NL21-1234";
 
         // create chipring

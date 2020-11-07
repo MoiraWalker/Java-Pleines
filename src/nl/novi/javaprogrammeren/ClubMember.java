@@ -22,6 +22,7 @@ public class ClubMember {
     private int totalContestPoints;
 
     private List<Dove> doveList;
+    private Dove dove;
 
     public ClubMember(String firstName, String lastName, String street, String postcode, String houseNumberAddition, String city, double cityLat, double cityLong, String email, String phoneNumber, int memberId, boolean isContributionPaid, int totalContestPoints) {
         this.firstName = firstName;
@@ -38,109 +39,19 @@ public class ClubMember {
         this.isContributionPaid = isContributionPaid;
         this.totalContestPoints = totalContestPoints;
         this.doveList = new ArrayList<>();
+        this.dove = dove;
     }
-
-
-
 
     public Boolean addDove(Dove dove) {
         return doveList.add(dove);
     }
 
-    public Boolean removeDove(Dove dove) {
-        return doveList.add(dove);
-    }
-
-    public void getFirstName(Dove dove) {
+    public void removeDove(Dove dove) {
          doveList.remove(dove);
     }
 
     public void deleteAllDoves() {
         doveList.clear();
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public String getPostcode() {
-        return postcode;
-    }
-
-    public void setPostcode(String postcode) {
-        this.postcode = postcode;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getHouseNumberAddition() {
-        return houseNumberAddition;
-    }
-
-    public void setHouseNumberAddition(String houseNumberAddition) {
-        this.houseNumberAddition = houseNumberAddition;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public int getMemberId() {
-        return memberId;
-    }
-
-    public void setMemberId(int memberId) {
-        this.memberId = memberId;
-    }
-
-    public boolean isContributionPaid() {
-        return isContributionPaid;
-    }
-
-    public void setContributionPaid(boolean contributionPaid) {
-        isContributionPaid = contributionPaid;
-    }
-
-    public int getTotalContestPoints() {
-        return totalContestPoints;
-    }
-
-    public void setTotalContestPoints(int totalContestPoints) {
-        this.totalContestPoints = totalContestPoints;
     }
 
     public List<Dove> getDoveList() {
