@@ -3,7 +3,7 @@ import java.util.Date;
 import java.lang.*;
 
 public class ChipRing {
-    private String chipRingNumber;
+    private int chipRingNumber;
     private Date releaseDate;
     private Date arrivalDate;
 
@@ -15,7 +15,7 @@ public class ChipRing {
     private double arriveLong;
     private String arriveCity;
 
-    public ChipRing(String chipRingNumber, Date releaseDate, Date arrivalDate, double releaseLat, double releaseLong, String releaseCity, double arriveLat, double arriveLong, String arriveCity) {
+    public ChipRing(int chipRingNumber, Date releaseDate, Date arrivalDate, double releaseLat, double releaseLong, String releaseCity, double arriveLat, double arriveLong, String arriveCity) {
         this.chipRingNumber = chipRingNumber;
         this.releaseDate = releaseDate;
         this.arrivalDate = arrivalDate;
@@ -25,30 +25,6 @@ public class ChipRing {
         this.arriveLat = arriveLat;
         this.arriveLong = arriveLong;
         this.arriveCity = arriveCity;
-    }
-
-    public double getReleaseLat() {
-        return releaseLat;
-    }
-
-    public void setReleaseLat(double releaseLat) {
-        this.releaseLat = releaseLat;
-    }
-
-    public double getReleaseLong() {
-        return releaseLong;
-    }
-
-    public void setReleaseLong(double releaseLong) {
-        this.releaseLong = releaseLong;
-    }
-
-    public String getReleaseCity() {
-        return releaseCity;
-    }
-
-    public void setReleaseCity(String releaseCity) {
-        this.releaseCity = releaseCity;
     }
 
     public long calcReleaseTime() {

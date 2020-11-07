@@ -4,37 +4,13 @@ import java.util.Date;
 
 public class Dove {
     private Date birthDate;
-    private int ringNumber;
-    private int ChipRing;
+    private String ringNumber;
+    private ChipRing chipRing;
 
-    public Dove(Date birthDate, int ringNumber, ChipRing chipRing) {
+    public Dove(Date birthDate, String ringNumber, ChipRing chipRing) {
         this.birthDate = birthDate;
         this.ringNumber = ringNumber;
-        this.ChipRing = ChipRing;
-    }
-
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public int getRingNumber() {
-        return ringNumber;
-    }
-
-    public void setRingNumber(int ringNumber) {
-        this.ringNumber = ringNumber;
-    }
-
-    public int getChipRing() {
-        return ChipRing;
-    }
-
-    public void setChipRing(int chipRing) {
-        ChipRing = chipRing;
+        this.chipRing = chipRing;
     }
 
     @Override
@@ -42,7 +18,7 @@ public class Dove {
         return "Dove { " + "\n" +
                 "\t\t" + "Birthdate dove: " + birthDate + "\n" +
                 "\t\t" + "Ringnumber: " + ringNumber + "\n" +
-                "\t\t" + "Chipring: " + ChipRing + "\n" +
+                "\t\t" + "Chipring: " + chipRing + "\n" +
                 '}';
     }
 }
