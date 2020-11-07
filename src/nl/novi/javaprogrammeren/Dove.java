@@ -2,12 +2,12 @@ package nl.novi.javaprogrammeren;
 
 import java.util.Date;
 
-public class Pigeon {
+public class Dove {
     private Date birthDate;
     private int ringNumber;
-    private ChipRing ChipRing;
+    private int ChipRing;
 
-    public Pigeon(Date birthDate, int ringNumber, ChipRing ChipRing) {
+    public Dove(Date birthDate, int ringNumber, ChipRing chipRing) {
         this.birthDate = birthDate;
         this.ringNumber = ringNumber;
         this.ChipRing = ChipRing;
@@ -29,18 +29,18 @@ public class Pigeon {
         this.ringNumber = ringNumber;
     }
 
-    public nl.novi.javaprogrammeren.ChipRing getChipRing() {
+    public int getChipRing() {
         return ChipRing;
     }
 
-    public void setChipRing(nl.novi.javaprogrammeren.ChipRing chipRing) {
+    public void setChipRing(int chipRing) {
         ChipRing = chipRing;
     }
 
     @Override
     public String toString() {
-        return "Pigeon { " + "\n" +
-                "\t\t" + "Birthdate pidgeon: " + birthDate + "\n" +
+        return "Dove { " + "\n" +
+                "\t\t" + "Birthdate dove: " + birthDate + "\n" +
                 "\t\t" + "Ringnumber: " + ringNumber + "\n" +
                 "\t\t" + "Chipring: " + ChipRing + "\n" +
                 '}';

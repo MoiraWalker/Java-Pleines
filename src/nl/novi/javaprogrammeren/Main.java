@@ -17,18 +17,18 @@ public class Main {
         double arriveLong = 5.104480;
         String arriveCity = "Utrecht";
         Date arrivalDate = new Date(2021,4,17,20,23,11);
-        Date pidgeonBirthDate = new Date(2019,2,1);
+        Date doveBirthDate = new Date(2019,2,1);
         int ringNumber = 123456;
 
-        // Chipring test
-        ChipRing chipring = new ChipRing(chipRingNumber, releaseDate,arrivalDate,releaseLat, releaseLong, releaseCity, arriveLat, arriveLong, arriveCity);
-        System.out.println(chipring);
+        // create chipring
+        ChipRing chipring = new ChipRing("123", releaseDate, arrivalDate, releaseLat, releaseLong, releaseCity, arriveLat, arriveLong, arriveCity);
 
-        // Pigeon test
-        Pigeon pigeon = new Pigeon(pidgeonBirthDate, ringNumber, chipring);
-        System.out.println(pigeon);
+        // create doves
+        Dove dove = new Dove(doveBirthDate, ringNumber, chipring);
+        Dove dove1 = new Dove(doveBirthDate, ringNumber, chipring);
 
-        // calcDistance Example 1
-        // System.out.print("The distance between those points is: " + chipring.calcDistance(releaseLat, releaseLong, arriveLat, arriveLong) + " km\n");
+        // create clubmember
+        ClubMember clubMember = new ClubMember("Moira", "Walker", "Ameland", "3524An", "", "Utrecht", 52.092876, 5.104480 ,"moira.walker@live.nl", "061235678", 123, true, 123);
+
     }
 }
