@@ -5,6 +5,16 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // create clubmember
+        ClubMember clubMember = new ClubMember("Moira", "Walker", "Ameland", "3524An", "", "Utrecht", 52.092876, 5.104480 ,"moira.walker@live.nl", "061235678", 123, true, 123);
+
+        // create doves from clubmember
+        clubMember.createDove("Pietje","NL19-1", new Date(2019,2,1));
+        clubMember.createDove("Klaasje","NL19-2", new Date(2019,4,2));
+        clubMember.createDove("Fiona","NL20-3", new Date(2020,11,6));
+
+        // CHIPRING TEST
+        // ___________________________________________________________
         // From Contest class
         double releaseLat = 52.379189;
         double releaseLong = 4.899431;
@@ -17,22 +27,9 @@ public class Main {
         double arriveLong = 5.104480;
         String arriveCity = "Utrecht";
         Date arrivalDate = new Date(2021,4,17,20,23,11);
-        Date doveBirthDate = new Date(2019,2,1);
-
-
-        // ik wil vanuit de clubmemberclass de ringNummer kunnen setten
-        String ringNumber = "NL21-1234";
 
         // create chipring
         ChipRing chipring = new ChipRing(chipRingNumber, releaseDate, arrivalDate, releaseLat, releaseLong, releaseCity, arriveLat, arriveLong, arriveCity);
 
-        // create doves
-        Dove dove = new Dove(doveBirthDate, ringNumber, chipring);
-        Dove dove1 = new Dove(doveBirthDate, ringNumber, chipring);
-
-        // create clubmember
-        ClubMember clubMember = new ClubMember("Moira", "Walker", "Ameland", "3524An", "", "Utrecht", 52.092876, 5.104480 ,"moira.walker@live.nl", "061235678", 123, true, 123);
-
-        System.out.println(dove);
     }
 }

@@ -1,7 +1,9 @@
 package nl.novi.javaprogrammeren;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Iterator;
 
 public class ClubMember {
     private String firstName;
@@ -22,7 +24,7 @@ public class ClubMember {
     private int totalContestPoints;
 
     private List<Dove> doveList;
-    private Dove dove;
+    public Dove dove;
 
     public ClubMember(String firstName, String lastName, String street, String postcode, String houseNumberAddition, String city, double cityLat, double cityLong, String email, String phoneNumber, int memberId, boolean isContributionPaid, int totalContestPoints) {
         this.firstName = firstName;
@@ -39,16 +41,33 @@ public class ClubMember {
         this.isContributionPaid = isContributionPaid;
         this.totalContestPoints = totalContestPoints;
         this.doveList = new ArrayList<>();
-        this.dove = dove;
     }
 
-    public Boolean addDove(Dove dove) {
-        return doveList.add(dove);
+    public void createDove(String name, String ringNumber, Date birthDate) {
+        Dove dove = new Dove(name, ringNumber, birthDate);
+        doveList.add(dove);
     }
 
-    public void removeDove(Dove dove) {
-         doveList.remove(dove);
+//    public void removeDove(String ringNumber) {
+//        for ( Dove dove : doveList) {
+//            if (dove.getRingNumber().equalsIgnoreCase(ringNumber)) {
+//                System.out.println("before remove" + dove);
+//                doveList.remove(dove);
+//            }
+//        }
+//    }
+
+    public void removeDove(String ringNumber) {
+        Iterator<Dove> itr = doveList.iterator();
+        while (itr.hasNext()) {
+            Dove dove = itr.next();
+            if (dove.getRingNumber().equalsIgnoreCase(ringNumber)){
+                itr.remove();
+            }
+        }
     }
+
+
 
     public void deleteAllDoves() {
         doveList.clear();

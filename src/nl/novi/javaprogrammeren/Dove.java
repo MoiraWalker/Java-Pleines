@@ -3,22 +3,39 @@ package nl.novi.javaprogrammeren;
 import java.util.Date;
 
 public class Dove {
-    private Date birthDate;
+    private String name;
     private String ringNumber;
-    private ChipRing chipRing;
+    private Date birthDate;
 
-    public Dove(Date birthDate, String ringNumber, ChipRing chipRing) {
-        this.birthDate = birthDate;
+    public Dove(String name, String ringNumber, Date birthDate) {
+        this.name = name;
         this.ringNumber = ringNumber;
-        this.chipRing = chipRing;
+        this.birthDate = birthDate;
     }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getRingNumber() {
+        return ringNumber;
+    }
+
+    public void setRingNumber(String ringNumber) {
+        this.ringNumber = ringNumber;
+    }
+
 
     @Override
     public String toString() {
         return "Dove { " + "\n" +
-                "\t\t" + "Birthdate dove: " + birthDate + "\n" +
+                "\t\t" + "name: " + name + "\n" +
                 "\t\t" + "Ringnumber: " + ringNumber + "\n" +
-                "\t\t" + "Chipring: " + chipRing + "\n" +
+                "\t\t" + "Birthdate: " + birthDate + "\n" +
                 '}';
     }
 }
