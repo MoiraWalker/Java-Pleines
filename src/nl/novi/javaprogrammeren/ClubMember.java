@@ -48,15 +48,6 @@ public class ClubMember {
         doveList.add(dove);
     }
 
-//    public void removeDove(String ringNumber) {
-//        for ( Dove dove : doveList) {
-//            if (dove.getRingNumber().equalsIgnoreCase(ringNumber)) {
-//                System.out.println("before remove" + dove);
-//                doveList.remove(dove);
-//            }
-//        }
-//    }
-
     public void removeDove(String ringNumber) {
         Iterator<Dove> itr = doveList.iterator();
         while (itr.hasNext()) {
@@ -66,8 +57,6 @@ public class ClubMember {
             }
         }
     }
-
-
 
     public void deleteAllDoves() {
         doveList.clear();

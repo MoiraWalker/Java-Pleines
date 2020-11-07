@@ -29,7 +29,6 @@ public class Dove {
         this.ringNumber = ringNumber;
     }
 
-
     @Override
     public String toString() {
         return "Dove { " + "\n" +
