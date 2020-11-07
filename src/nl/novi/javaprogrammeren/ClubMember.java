@@ -69,4 +69,36 @@ public class ClubMember {
     public void setDoveList(List<Dove> doveList) {
         this.doveList = doveList;
     }
+
+    public boolean isContributionPaid() {
+        return isContributionPaid;
+    }
+
+    public void setContributionPaid(boolean contributionPaid) {
+        isContributionPaid = contributionPaid;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public double getCityLat() {
+        return cityLat;
+    }
+
+    public void setCityLat(double cityLat) {
+        this.cityLat = cityLat;
+    }
+
+    public double getCityLong() {
+        return cityLong;
+    }
+
+    public void setCityLong(double cityLong) {
+        this.cityLong = cityLong;
+    }
 }

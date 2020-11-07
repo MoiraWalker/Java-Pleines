@@ -14,7 +14,6 @@ public class Main {
         clubMember.createDove("Fiona","NL20-3", new Date(2020,11,6));
 
         // CHIPRING TEST
-        // ___________________________________________________________
         // From Contest class
         double releaseLat = 52.379189;
         double releaseLong = 4.899431;
@@ -30,6 +29,5 @@ public class Main {
 
         // create chipring
         ChipRing chipring = new ChipRing(chipRingNumber, releaseDate, arrivalDate, releaseLat, releaseLong, releaseCity, arriveLat, arriveLong, arriveCity);
-
     }
 }
